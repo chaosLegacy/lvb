@@ -1,0 +1,135 @@
+Hello guys in this article, i'll be sharing with you some of my and other people's&nbsp; knowledge in some technologies that you may actually using right now, here you can find some useful shortcut and functions that can be useful for you if you are a student or someone else that he/she just got stuck trying to find the right&nbsp;<b>command line</b>.<br />
+<br />
+I encourage you who is reading this article to start taking notes about anything you are doing it will be useful for you first to find whatever you are looking for quickly and you can help other people to have this knowledge by sharing it with them if you are already doing this that's Awesome.<br />
+<br />
+Feel free to add more stuff or modify incorrect statements&nbsp; by contributing into this github repository<br />
+<br />
+Our actual contributors:<br />
+<a href="https://github.com/SManral" target="_blank">Smriti SManral</a><br />
+<br />
+We are going to split this article into 3 parts :<br />
+<a href="http://www.archaius.tk/2017/11/quick-learn-linux-vim-bashscript.html" rel="nofollow" target="_blank">Linux command lines</a><br />
+<a href="http://www.archaius.tk/2017/11/quik-learn-bash-script.html" rel="nofollow" target="_blank">Bash Script command lines</a><br />
+<a href="http://www.archaius.tk/2017/11/quik-learn-vim.html" rel="nofollow" target="_blank">Vim command lines</a><br />
+<br />
+<br />
+Without further delay let's get started :)<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://garywoodfine.com/wp-content/uploads/2015/08/bash_script.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="500" data-original-width="800" height="400" src="https://garywoodfine.com/wp-content/uploads/2015/08/bash_script.png" width="640" /></a></div>
+<br />
+<b><br /></b>
+<b>&nbsp;C</b>ount of arguments<br />
+<br />
+<ul>
+<li><b>* $#</b></li>
+</ul>
+<br />
+To download something using curl<br />
+<br />
+<ul>
+<li><b>* curl -O [url]</b></li>
+</ul>
+<br />
+List of all arguments<br />
+<br />
+<ul>
+<li><b>* $@</b></li>
+</ul>
+<br />
+Print entire array<br />
+<br />
+<ul>
+<li><b>* echo ”${array[@]}”</b></li>
+</ul>
+<br />
+Copy the positional params to an array:<br />
+<br />
+<ul>
+<li><b>* args=("$@")&nbsp; &nbsp;</b></li>
+</ul>
+<br />
+To iterate over args using simple for<br />
+<br />
+<ul>
+<li><b>* for ((i=0; i&lt;=$#; i++))</b></li>
+<li><b>* do””</b></li>
+<li><b>&nbsp;echo ${!i}&nbsp;</b></li>
+<li><b>* done</b></li>
+</ul>
+<br />
+Iterate over array<br />
+<br />
+<ul>
+<li><b>* for ((i=0; i&lt;${#args[@]}; i++));&nbsp;</b></li>
+<li><b>* do</b></li>
+<li><b>&nbsp; &nbsp; &nbsp; echo "$i&nbsp; ${args[i]}&nbsp; ${args[i-1]}&nbsp; ${args[i+1]}"</b></li>
+<li><b>* done</b></li>
+</ul>
+<br />
+To check if file exists<br />
+<br />
+<ul>
+<li><b>* if [ -f $filename ]</b></li>
+</ul>
+<div>
+to check if word present in a file</div>
+<div>
+<ul>
+<li><b>* if [ $(grep ”$word" $filename) ]</b></li>
+</ul>
+</div>
+<br />
+To check not equal<br />
+<br />
+<ul>
+<li><b>ne</b></li>
+</ul>
+<br />
+To check greater than and greater than equal<br />
+<br />
+<ul>
+<li><b>* -gt</b></li>
+<li></li>
+<li><b>* -ge</b></li>
+</ul>
+<br />
+To check equal<br />
+<br />
+<ul>
+<li><b>eq</b></li>
+</ul>
+<br />
+To check less than &amp; less than equal<br />
+<br />
+<ul>
+<li><b>* -lt</b></li>
+<li><b>* -lt</b></li>
+</ul>
+<br />
+To convert temp from F to K<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://4.bp.blogspot.com/-NHCJ4u7fZLI/Wg2StPCBXWI/AAAAAAAAAoc/Wify6L2-APkcf_NSa_XiyODgF_P-UEV1gCLcBGAs/s1600/convert%2Btemp%2Bfrom%2Bf%2Bto%2Bk.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="480" data-original-width="639" height="480" src="https://4.bp.blogspot.com/-NHCJ4u7fZLI/Wg2StPCBXWI/AAAAAAAAAoc/Wify6L2-APkcf_NSa_XiyODgF_P-UEV1gCLcBGAs/s640/convert%2Btemp%2Bfrom%2Bf%2Bto%2Bk.png" width="640" /></a></div>
+<br />
+To append a line in a file if not already present<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://2.bp.blogspot.com/-7SF2SReH00U/Wg2S8GYotHI/AAAAAAAAAog/QrDawcbtXzk8NVKD_0Gr5R77eaIPEMGDACLcBGAs/s1600/append%2Ba%2Bline%2Bin%2Ba%2Bfile%2Bif%2Bnot%2Balready%2Bpresent.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="479" data-original-width="638" height="480" src="https://2.bp.blogspot.com/-7SF2SReH00U/Wg2S8GYotHI/AAAAAAAAAog/QrDawcbtXzk8NVKD_0Gr5R77eaIPEMGDACLcBGAs/s640/append%2Ba%2Bline%2Bin%2Ba%2Bfile%2Bif%2Bnot%2Balready%2Bpresent.png" width="640" /></a></div>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://3.bp.blogspot.com/-wMiyP_xzE6E/Wg2TL_EhkdI/AAAAAAAAAok/fggq70QyEHsIVPVcuyLDJrZd8mabp-b2ACLcBGAs/s1600/append%2Ba%2Bline%2Bin%2Ba%2Bfile%2Bif%2Bnot%2Balready%2Bpresent%2Bnext.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="124" data-original-width="642" src="https://3.bp.blogspot.com/-wMiyP_xzE6E/Wg2TL_EhkdI/AAAAAAAAAok/fggq70QyEHsIVPVcuyLDJrZd8mabp-b2ACLcBGAs/s1600/append%2Ba%2Bline%2Bin%2Ba%2Bfile%2Bif%2Bnot%2Balready%2Bpresent%2Bnext.png" /></a></div>
+<br />
+To turn CSV file to comma delimited sentence<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://4.bp.blogspot.com/-YeV6M12kzqo/Wg2TYwpIAzI/AAAAAAAAAow/eco_JQFtUBM1vNHSyT3M4T1MxWEWdcXMgCLcBGAs/s1600/URN%2BCSV%2BFILE%2BTO%2BCOMMA%2BDELIMITED.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="483" data-original-width="637" height="484" src="https://4.bp.blogspot.com/-YeV6M12kzqo/Wg2TYwpIAzI/AAAAAAAAAow/eco_JQFtUBM1vNHSyT3M4T1MxWEWdcXMgCLcBGAs/s640/URN%2BCSV%2BFILE%2BTO%2BCOMMA%2BDELIMITED.png" width="640" /></a></div>
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://1.bp.blogspot.com/-7fdf-n4F2As/Wg2Tk3UVhJI/AAAAAAAAAo0/oiUySx6pMGMLyzB62fmYxsFlLUj9VlpmwCLcBGAs/s1600/URN%2BCSV%2BFILE%2BTO%2BCOMMA%2BDELIMITED%2Bnext.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="116" data-original-width="633" height="116" src="https://1.bp.blogspot.com/-7fdf-n4F2As/Wg2Tk3UVhJI/AAAAAAAAAo0/oiUySx6pMGMLyzB62fmYxsFlLUj9VlpmwCLcBGAs/s640/URN%2BCSV%2BFILE%2BTO%2BCOMMA%2BDELIMITED%2Bnext.png" width="640" /></a></div>
+<br />
+Count no. of time program is executed<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://3.bp.blogspot.com/-wZ6mcv130gI/Wg2Tvn3qVCI/AAAAAAAAAo4/xgZriH_XaPgu0s3qaui-3SUxlCx2fUtBgCLcBGAs/s1600/count%2Bno.%2Bof%2Btime%2Bprogram%2Bis%2Bexecuted.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="270" data-original-width="298" height="579" src="https://3.bp.blogspot.com/-wZ6mcv130gI/Wg2Tvn3qVCI/AAAAAAAAAo4/xgZriH_XaPgu0s3qaui-3SUxlCx2fUtBgCLcBGAs/s640/count%2Bno.%2Bof%2Btime%2Bprogram%2Bis%2Bexecuted.png" width="640" /></a></div>
+<br />
+<br />
